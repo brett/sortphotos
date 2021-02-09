@@ -23,6 +23,7 @@ from datetime import datetime, timedelta
 import re
 import locale
 
+
 # Setting locale to the 'local' value
 locale.setlocale(locale.LC_ALL, '')
 
@@ -374,7 +375,7 @@ def sortPhotos(src_dir, dest_dir, sort_format, rename_format, recursive=False,
             filename = date.strftime(rename_format) + ext.lower()
 
         # setup destination file
-        dest_file = os.path.join(dest_file, filename.encode('utf-8'))
+        dest_file = os.path.join(dest_file, filename)
         root, ext = os.path.splitext(dest_file)
 
         if verbose:
